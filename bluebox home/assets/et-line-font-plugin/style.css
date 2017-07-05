@@ -69,10 +69,12 @@ you can use the generic selector below, but it's slower:
 	content: "\e008";
 }
 .icon-newspaper:before {
-	content: "\e009";
+	/*content: "\e009";*/
+    content: url(../images/icono1.png);
 }
 .icon-notebook:before {
-	content: "\e00a";
+	/*content: "\e00a";*/
+    content: url(../images/icono2.png);
 }
 .icon-book-open:before {
 	content: "\e00b";
@@ -139,10 +141,11 @@ you can use the generic selector below, but it's slower:
 }
 .icon-lock:before {
 	/*content: "\e020";*/
-    content: url(../images/icono2.png);
+    content: url(../images/inicio.png);
 }
 .icon-megaphone:before {
-	content: "\e021";
+	/*content: "\e021";*/
+    content: url(../images/servicios.png);
 }
 .icon-shield:before {
 	content: "\e022";
@@ -169,7 +172,8 @@ you can use the generic selector below, but it's slower:
 	content: "\e029";
 }
 .icon-telescope:before {
-	content: "\e02a";
+	/*content: "\e02a";*/
+    content: url(../images/icono5.png);
 }
 .icon-gears:before {
 	content: "\e02b";
@@ -191,7 +195,7 @@ you can use the generic selector below, but it's slower:
 }
 .icon-layers:before {
 	/*content: "\e031";*/
-   content: url(../images/icono1.png);
+   content: url(../images/almacenes.png);
 }
 .icon-pencil:before {
 	content: "\e032";
@@ -257,14 +261,16 @@ you can use the generic selector below, but it's slower:
 	content: "\e046";
 }
 .icon-map-pin:before {
-	content: "\e047";
+	/*content: "\e047";*/
+    content: url(../images/contacto.png);
+
 }
 .icon-dial:before {
 	content: "\e048";
 }
 .icon-chat:before {
 	/*content: "\e049";*/
-    content: url(../images/icono3.png);
+    content: url(../images/testimonio.png);
 
 }
 .icon-heart:before {

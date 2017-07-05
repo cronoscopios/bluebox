@@ -211,7 +211,9 @@
   content: "\e93d";
 }
 .mbri-map-pin:before {
-  content: "\e93e";
+  /*content: "\e93e";*/
+  content: url(./icono4.png);
+
 }
 .mbri-menu:before {
   content: "\e93f";

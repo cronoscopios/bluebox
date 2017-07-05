@@ -77,6 +77,7 @@
 
 .mbr-gallery .mbr-gallery-item:hover> div::before {
   opacity: 0.5;
+   
 }
 
 .mbr-gallery-row {
@@ -148,10 +149,12 @@
 
 .mbr-gallery-item> div {
   position: relative;
+    
 }
 
 .mbr-gallery-item--p1 {
-  padding: 1rem;
+  padding: 0.5rem;
+    
 }
 
 .mbr-gallery-item--p2 {

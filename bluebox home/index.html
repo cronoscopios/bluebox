@@ -25,12 +25,18 @@
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="stylesheet" href="assets/mobirise-gallery/style.css">
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  <link rel="stylesheet" href="assets/theme/css/hamburgers.min.css">
+
 </head>
+
+<div id="preloader">
+  <div id="status">&nbsp;</div>
+</div>
 
 <body>
 <section id="menu-8">
 
-    <nav class="navbar navbar-dropdown navbar-fixed-top">
+    <nav  class="navbar navbar-dropdown navbar-fixed-top" style="background-color: #fff;">
         <div class="container">
 
             <div class="mbr-table">
@@ -45,22 +51,53 @@
 
                 </div>
                 <div class="mbr-table-cell">
-
-                    <button class="navbar-toggler pull-xs-right" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
-                        <div class="hamburger-icon"></div>
+                    
+                    <button class="hamburger hamburger--slider navbar-toggler pull-xs-right" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                      <span class="hamburger-label">Menú</span>
+                      <span class="hamburger-box">
+                          <span class="hamburger-inner"></span>
+                      </span>
                     </button>
+                    
+<script>
+  // Look for .hamburger
+  var hamburger = document.querySelector(".hamburger");
+  // On click
+  hamburger.addEventListener("click", function() {
+    // Toggle class "is-active"
+    hamburger.classList.toggle(".is-active");
+    // Do something else, like open/close menu
+  });
+</script>
 
-                    <ul class="nav-dropdown collapse ull-xs-right nav navbar-nav navbar-toggleable-xl" id="exCollapsingNavbar">
-                    <li class="nav-item"><a class="nav-link link" href="index.html#header1-0">
-                    <span class="etl-icon icon-lock mbr-iconfont mbr-iconfont-btn"></span>INICIO</a></li>
-                    <li class="nav-item dropdown"><a class="nav-link link" href="index.html#features4-1" aria-expanded="false">
-                    <span class="etl-icon icon-lock mbr-iconfont mbr-iconfont-btn"></span>SERVICIOS</a></li>
-                    <li class="nav-item"><a class="nav-link link" href="index.html#msg-box3-l" aria-expanded="false"><span class="etl-icon icon-layers mbr-iconfont mbr-iconfont-btn"></span>ALMACENES</a></li>
-                    <li class="nav-item"><a class="nav-link link" href="index.html#testimonials4-g" aria-expanded="false">
-                    <span class="etl-icon icon-chat mbr-iconfont mbr-iconfont-btn"></span>TESTIMONIOS</a></li>
-                    <li class="nav-item dropdown"><a class="nav-link link" href="index.html#form1-12" aria-expanded="false">
-                    <span class="etl-icon icon-lock mbr-iconfont mbr-iconfont-btn"></span>CONTACTO</a></li>
+                    <!--<button class="navbar-toggler pull-xs-right" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                        <div class="hamburger-icon"></div>
+                    </button>-->
+
+                    <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-xl" id="exCollapsingNavbar">
+                       
+                        <li class="nav-item">
+                            <a class="nav-link link" href="index.html#header1-0">
+                            <span class="etl-icon icon-lock mbr-iconfont mbr-iconfont-btn"></span>
+                            INICIO</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link link" href="index.html#features4-1">
+                            <span class="etl-icon icon-megaphone mbr-iconfont mbr-iconfont-btn"></span>
+                           SERVICIOS</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link link" href="index.html#msg-box3-l">
+                            <span class="etl-icon icon-layers mbr-iconfont mbr-iconfont-btn"></span>
+                            ALMACENES</a></li>
+                        <li class="nav-item" style="display:none;">
+                            <a class="nav-link link" href="index.html#testimonials4-g">
+                            <span class="etl-icon icon-chat mbr-iconfont mbr-iconfont-btn"></span>
+                            TESTIMONIOS</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link link" href="index.html#form1-12">
+                            <span class="etl-icon icon-map-pin mbr-iconfont mbr-iconfont-btn"></span>
+                            CONTACTO</a></li>
                     </ul>
+                    
                     <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
                         <div class="close-icon"></div>
                     </button>
@@ -73,31 +110,282 @@
 
 </section>
 
-<section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background mbr-section-with-arrow mbr-after-navbar" id="header1-0" style="background-image: url(assets/images/recurso-1-2000x1500.png);">
+<style>
+    .slideshow {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
 
-    <div class="mbr-overlay" style="opacity: 0; background-color: rgb(255, 255, 255);"></div>
+.slideshow-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: no-repeat 50% 50%;
+  background-size: cover;
+  -webkit-animation-name: kenburns;
+          animation-name: kenburns;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 16s;
+          animation-duration: 16s;
+  opacity: 1;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.slideshow-image:nth-child(1) {
+  -webkit-animation-name: kenburns-1;
+          animation-name: kenburns-1;
+  z-index: 3;
+}
+.slideshow-image:nth-child(2) {
+  -webkit-animation-name: kenburns-2;
+          animation-name: kenburns-2;
+  z-index: 2;
+}
+.slideshow-image:nth-child(3) {
+  -webkit-animation-name: kenburns-3;
+          animation-name: kenburns-3;
+  z-index: 1;
+}
+.slideshow-image:nth-child(4) {
+  -webkit-animation-name: kenburns-4;
+          animation-name: kenburns-4;
+  z-index: 0;
+}
+
+@-webkit-keyframes kenburns-1 {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  1.5625% {
+    opacity: 1;
+  }
+  23.4375% {
+    opacity: 1;
+  }
+  26.5625% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  98.4375% {
+    opacity: 0;
+    -webkit-transform: scale(1.21176);
+            transform: scale(1.21176);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes kenburns-1 {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  1.5625% {
+    opacity: 1;
+  }
+  23.4375% {
+    opacity: 1;
+  }
+  26.5625% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  98.4375% {
+    opacity: 0;
+    -webkit-transform: scale(1.21176);
+            transform: scale(1.21176);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes kenburns-2 {
+  23.4375% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  26.5625% {
+    opacity: 1;
+  }
+  48.4375% {
+    opacity: 1;
+  }
+  51.5625% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+@keyframes kenburns-2 {
+  23.4375% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  26.5625% {
+    opacity: 1;
+  }
+  48.4375% {
+    opacity: 1;
+  }
+  51.5625% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+@-webkit-keyframes kenburns-3 {
+  48.4375% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  51.5625% {
+    opacity: 1;
+  }
+  73.4375% {
+    opacity: 1;
+  }
+  76.5625% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+@keyframes kenburns-3 {
+  48.4375% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  51.5625% {
+    opacity: 1;
+  }
+  73.4375% {
+    opacity: 1;
+  }
+  76.5625% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+@-webkit-keyframes kenburns-4 {
+  73.4375% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  76.5625% {
+    opacity: 1;
+  }
+  98.4375% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes kenburns-4 {
+  73.4375% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  76.5625% {
+    opacity: 1;
+  }
+  98.4375% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+    
+
+</style>
+
+   
+    <section class="slideshow mbr-section mbr-section-hero mbr-section-full mbr-parallax-background mbr-section-with-arrow mbr-after-navbar" id="header1-0">
+		<div class="slideshow-image" style="background-image: url(assets/images/fachada_azul.png);"></div>
+        <div class="slideshow-image" style="background-image: url(assets/images/recurso-1-2000x1500.png);"></div>
+
+		<div class="slideshow-image" style="background-image: url(assets/images/interior_azul.png);"></div>
+		<div class="slideshow-image" style="background-image: url(assets/images/fachada_azul.png);"></div>
+
+
+
+    <div class="mbr-overlay" style="position: absolute; opacity: 0; background-color: rgb(255, 255, 255);"></div>
 
     <div class="mbr-table-cell">
 
         <div class="container">
             <div class="row">
-                <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
+                <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center animated zoomIn">
 
                     <h1 class="mbr-section-title display-1">
-                    <big><span style="font-weight: 100;">SOLUCIONES<br>DE ESPACIO<br></span></big>
-                    <span class="mbr-section-lead lead" style="color:#41a85f;"><strong>A TU MEDIDA</strong></span>
+                        <span style="font-weight: 100;">
+                            <span style="font-size: 4.5rem;">SOLUCIONES<br>DE ESPACIO<br></span>
+                        </span>
+                        <b style="color:#83c787;">A TU MEDIDA</b>
+    
                     </h1>
-                    
-                    <!--<p class="mbr-section-lead lead">
-                        <span style="line-height: 1.5;"><strong>A TU MEDIDA</strong></span>
-                    </p>-->
                     
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="mbr-arrow mbr-arrow-floating" aria-hidden="true"><a href="#features1-14"><i class="mbr-arrow-icon"></i></a></div>
+    <div class="mbr-arrow mbr-arrow-floating" aria-hidden="true">
+        <a href="#features1-14"><i class="mbr-arrow-icon"></i></a>
+    </div>
 
 </section>
 
@@ -105,8 +393,8 @@
     <div class="mbr-cards-row row striped">
 
         <div class="mbr-cards-col col-xs-12 col-lg-6" style="padding-top: 0px; padding-bottom: 0px;">
-            <div class="container">
-                <div class="card cart-block animated fadeInUpBig">
+            <div class="post container">
+                <div class="card cart-block">
                     <div class="card-img">
                         <img src="assets/images/caratula.png" class="card-img-top">
                     </div>
@@ -114,12 +402,13 @@
                 </div>
             </div>
         </div>
+        
         <div class="mbr-cards-col col-xs-12 col-lg-6" style="padding-top: 0px; padding-bottom: 0px;">
             <div class="container">
                 <div class="card cart-block">
                     
                     <div class="card-block">
-                        <h4 class="card-title">
+                        <h4 class="card-title" style="margin-right:5%;">
                             <span style="font-weight: normal;"><strong>ALQUILER<br>DE ALMACENES</strong><br>desde 17 a<br>70 m2 o más</span>
                         </h4>
                             
@@ -140,7 +429,7 @@
             <div class="container">
                 <div class="card cart-block">
                     <div class="card-img iconbox">
-                    <span class="etl-icon icon-layers mbr-iconfont mbr-iconfont-features4" style="color: rgb(41, 105, 176);"></span>
+                    <span class="etl-icon icon-newspaper mbr-iconfont mbr-iconfont-features4" style="color: rgb(41, 105, 176);"></span>
                     </div>
                     
                     <div class="card-block">
@@ -155,7 +444,7 @@
             <div class="container">
                 <div class="card cart-block">
                     <div class="card-img iconbox">
-                    <span class="etl-icon icon-lock mbr-iconfont mbr-iconfont-features4" style="color: rgb(41, 105, 176);"></span>
+                    <span class="etl-icon icon-notebook mbr-iconfont mbr-iconfont-features4" style="color: rgb(41, 105, 176);"></span>
                     </div>
                     <div class="card-block">
                         
@@ -205,7 +494,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-xs-center">
-                <h3 class="mbr-section-title display-2"><span style="font-weight: normal;">MODERNOS ALMACENES</span></h3>
+                <h3 class="mbr-section-title display-2"><span>MODERNOS ALMACENES</span></h3>
                 <div class="lead"><p>Nuestras amplias y cómodas instalaciones te darán el espacio que tu negocio necesita</p></div>
                 
             </div>
@@ -224,21 +513,21 @@
             <div>
                 <div>
                     <div class="mbr-gallery-item mbr-gallery-item__mobirise3 mbr-gallery-item--p1" data-tags="Responsive" data-video-url="false">
-                        <div href="#lb-gallery1-d" data-slide-to="0" data-toggle="modal">
+                        <div class="zoom_img" href="#lb-gallery1-d" data-slide-to="0" data-toggle="modal">
                             
-                            
-
-                            <img alt="" src="assets/images/img-3-2000x1500-800x600.jpg">
+                            <img alt="" src="assets/images/galeria/IMG_3447.png">
                             
                             <span class="icon-focus"></span>
                             
                         </div>
-                    </div><div class="mbr-gallery-item mbr-gallery-item__mobirise3 mbr-gallery-item--p1" data-tags="Creative" data-video-url="false">
+                    </div>
+                    
+                    <div class="mbr-gallery-item mbr-gallery-item__mobirise3 mbr-gallery-item--p1" data-tags="Creative" data-video-url="false">
                         <div href="#lb-gallery1-d" data-slide-to="1" data-toggle="modal">
                             
                             
 
-                            <img alt="" src="assets/images/img-4-2000x1500-800x600.jpg">
+                            <img alt="" src="assets/images/galeria/IMG_3456.png">
                             
                             <span class="icon-focus"></span>
                             
@@ -248,7 +537,7 @@
                             
                             
 
-                            <img alt="" src="assets/images/img-5-2000x1500-800x600.jpg">
+                            <img alt="" src="assets/images/galeria/IMG_3487.png">
                             
                             <span class="icon-focus"></span>
                             
@@ -258,7 +547,7 @@
                             
                             
 
-                            <img alt="" src="assets/images/img-6-2000x1500-800x600.jpg">
+                            <img alt="" src="assets/images/galeria/IMG_1081.JPG">
                             
                             <span class="icon-focus"></span>
                             
@@ -268,7 +557,7 @@
                             
                             
 
-                            <img alt="" src="assets/images/img-7-2000x1500-800x600.jpg">
+                            <img alt="" src="assets/images/galeria/IMG_3543.png">
                             
                             <span class="icon-focus"></span>
                             
@@ -278,7 +567,7 @@
                             
                             
 
-                            <img alt="" src="assets/images/img-8-2000x1500-800x600.jpg">
+                            <img alt="" src="assets/images/galeria/IMG_3489.png">
                             
                             <span class="icon-focus"></span>
                             
@@ -288,7 +577,7 @@
                             
                             
 
-                            <img alt="" src="assets/images/img-3-2000x1500-800x600.jpg">
+                            <img alt="" src="assets/images/galeria/IMG_3496.png">
                             
                             <span class="icon-focus"></span>
                             
@@ -298,7 +587,7 @@
                             
                             
 
-                            <img alt="" src="assets/images/img-3-2000x1500-800x600.jpg">
+                            <img alt="" src="assets/images/galeria/IMG_3572_2.png">
                             
                             <span class="icon-focus"></span>
                             
@@ -320,21 +609,21 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item">
-                            <img alt="" src="assets/images/img-3-2000x1500.jpg">
+                            <img alt="" src="assets/images/galeria/IMG_3447.png">
                         </div><div class="carousel-item">
-                            <img alt="" src="assets/images/img-4-2000x1500.jpg">
+                            <img alt="" src="assets/images/galeria/IMG_3456.png">
                         </div><div class="carousel-item">
-                            <img alt="" src="assets/images/img-5-2000x1500.jpg">
+                            <img alt="" src="assets/images/galeria/IMG_3487.png">
                         </div><div class="carousel-item">
-                            <img alt="" src="assets/images/img-6-2000x1500.jpg">
+                            <img alt="" src="assets/images/galeria/IMG_1081.JPG">
                         </div><div class="carousel-item">
-                            <img alt="" src="assets/images/img-7-2000x1500.jpg">
+                            <img alt="" src="assets/images/galeria/IMG_3543.png">
                         </div><div class="carousel-item">
-                            <img alt="" src="assets/images/img-8-2000x1500.jpg">
+                            <img alt="" src="assets/images/galeria/IMG_3489.png">
                         </div><div class="carousel-item">
-                            <img alt="" src="assets/images/img-3-2000x1500.jpg">
+                            <img alt="" src="assets/images/galeria/IMG_3496.png">
                         </div><div class="carousel-item active">
-                            <img alt="" src="assets/images/img-3-2000x1500.jpg">
+                            <img alt="" src="assets/images/galeria/IMG_3572.png">
                         </div>
                     </div>
                     <a class="left carousel-control" role="button" data-slide="prev" href="#lb-gallery1-d">
@@ -356,7 +645,7 @@
     </div>
 </section>
 
-<section class="mbr-section article mbr-parallax-background" id="msg-box8-q" style="background-image: url(assets/images/camara.png); padding-top: 200px; padding-bottom: 200px;">
+<section class="mbr-section article mbr-parallax-background" id="msg-box8-q" style="background-image: url(assets/images/camara.png); padding-top: 250px; padding-bottom: 250px;">
 
     <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);">
     </div>
@@ -374,7 +663,7 @@
 
 </section>
 
-<section class="mbr-section" id="testimonials4-g" style="background-color: rgb(0, 106, 177); padding-top: 80px; padding-bottom: 120px;">
+<section class="mbr-section" id="testimonials4-g" style="background-color: rgb(0, 106, 177); padding-top: 80px; padding-bottom: 120px; display:none;">
 
     
 
@@ -442,7 +731,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 text-xs-center">
-                    <h3 class="mbr-section-title display-2"><span style="font-weight: normal;">CONTACTO</span></h3>
+                    <h3 class="mbr-section-title display-2"><span>CONTACTO</span></h3>
                     
                 </div>
             </div>
@@ -455,11 +744,11 @@
 
 
                     <div data-form-alert="true">
-                        <div hidden="" data-form-alert-success="true" class="alert alert-form alert-success text-xs-center">¡Gracias! A la brevedad nos pondremos en contacto. </div>
+                        <div hidden="" data-form-alert-success="true" class="alert alert-form alert-success text-xs-center">¡Gracias! A la brevedad nos pondremos en contacto </div>
                     </div>
 
 
-                    <form action="https://mobirise.com/" method="post" data-form-title="CONTACTO">
+                    <form action="https://mobirise.com/" method="post" data-form-title="Hola desde www.bluebox.pe">
 
                         <input type="hidden" value="nCg/08Wqahun77QVax462BiKJTQ26MuLBu+UAXvFRY1k8SWb8+R4WHJX/dGGfCRk2+ly09b4+yLJr22I1XtUcLWbVYI5FSxXj5H+vxIyoT5eeEzkvSNoz1tieg7Yx3Xu" data-form-email="true">
 
@@ -502,43 +791,46 @@
     </div>
 </section>
 
+<div id="mapa"></div>
+
+<!--Mapa original no editar!!!
 <section class="mbr-section mbr-section-nopadding" id="map1-w">
     <div class="mbr-map">
     <iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0Dx_boXQiwvdz8sJHoYeZNVTdoWONYkU&amp;q=place_id:ChIJDRccA4PIBZER20VcvmEbMd4" allowfullscreen=""></iframe>
     </div>
-</section>
+</section>-->
 
-<section class="mbr-section mbr-section-md-padding mbr-footer footer1" id="contacts1-11" style="background-color: rgb(255, 255, 255); padding-top: 120px; padding-bottom: 120px;">
+<section class="mbr-section mbr-section-md-padding mbr-footer footer1" id="contacts1-11" style="background-color: rgb(255, 255, 255);"> <!--padding-top: 120px; padding-bottom: 120px;">-->
     
     <div class="container">
         <div class="row">
             <div class="mbr-footer-content col-xs-12 col-md-3">
-                <div><img src="assets/images/logo-2.png"></div>
+                <div><img src="assets/images/logo-3.png" style="max-width:90%;"></div>
             </div>
             <div class="mbr-footer-content col-xs-12 col-md-3">
-                <p>DIRECCIÓN<br></p>
-                <address>
-                <p>
+                <strong>DIRECCIÓN</strong><br>
+                <p style="color:#77787b;">
                 Antonio Bazo 1791<br>
-                La Victoria, Lima</p>
-                </address>
+                La Victoria, Lima - Perú</p>
             </div>
             <div class="mbr-footer-content col-xs-12 col-md-3">
-                <p>CONTACTO<br>
-M. <a href="mailto:informes@bluebox.pe?Subject=Hola%20desde%20website">informes@bluebox.pe</a><br>
-T. <a href="tel: 998 109 613">998 109 613</a><br>
-T. <a href="tel: 998 109 388">998 109 388</a><br>
-T. <a href="tel: (01) 473 2323">(01) 473 2323</a>
+                <p style="color:#77787b;"><strong>CONTACTO</strong><br>
+<span style="font-weight:bold;">M.</span> <a href="mailto:informes@bluebox.pe?Subject=Hola%20desde%20www.bluebox.pe">informes@bluebox.pe</a><br>
+<span style="font-weight:bold;">T.</span> <a href="tel: 998 109 613">998 109 613</a><br>
+<span style="font-weight:bold;">T.</span> <a href="tel: 998 109 388">998 109 388</a><br>
+<span style="font-weight:bold;">T.</span> <a href="tel: (01) 473 2323">(01) 473 2323</a>
             </p>
             </div>
             <div class="mbr-footer-content col-xs-12 col-md-3">
-                <p>SIGUENOS<br></p>
+                <p><strong>SÍGUENOS</strong><br></p>
                    <div>
 
                   <div class="mbr-social-likes" data-counters="false">
+                    <a href="https://www.facebook.com/BlueBoxAlmacenes/" target="_blank">
                     <span class="btn btn-social facebook" title="Share link on Facebook">
                         <i class="socicon socicon-facebook"></i>
-                    </span>           
+                    </span>
+                    </a>           
                     </div>
                   </div> 
                 
@@ -571,7 +863,77 @@ T. <a href="tel: (01) 473 2323">(01) 473 2323</a>
   <script src="assets/mobirise-gallery/player.min.js"></script>
   <script src="assets/mobirise-gallery/script.js"></script>
   <script src="assets/formoid/formoid.min.js"></script>
+   
+    <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+   
+   <style type="text/css">
+    #mapa { height: 500px; }
+    </style>
+   
+  <script>
+    function initialize() {
+      var marcadores = [
+        ['BlueBox', -12.07560239, -77.01349497],
+        ['Óvalo Arriola', -12.07736494, -77.01061964],
+        ['Av. Javier Prado', -12.08940876, -77.01216459]
+      ];
+        
+      var map = new google.maps.Map(document.getElementById('mapa'), {
+        zoom: 14,
+        center: new google.maps.LatLng(-12.07560239, -77.01349497),
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        scrollwheel: false
+      });
+        
+      var infowindow = new google.maps.InfoWindow();
+      var marker, i;
+        
+      for (i = 0; i < marcadores.length; i++) {  
+        marker = new google.maps.Marker({
+          position: new google.maps.LatLng(marcadores[i][1], marcadores[i][2]),
+          map: map,   
+        });
+          
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+          return function() {
+            infowindow.setContent(marcadores[i][0]);
+            infowindow.open(map, marker);
+          }
+        })(marker, i));
+      }
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
   
+   
+<script>
+    // makes sure the whole site is loaded
+    jQuery(window).load(function() {
+    // will first fade out the loading animation
+        jQuery("#status").fadeOut();
+    // will fade out the whole DIV that covers the website.
+        jQuery("#preloader").delay(1000).fadeOut("slow");
+}) 
+</script>   
+    
+<script>
+      jQuery(document).ready(function() {
+	   jQuery('.post').addClass("hidden").viewportChecker({
+	       classToAdd: 'visible animated fadeInLeft', // Class to add to the elements when they are visible
+	       offset: 500    
+	       });   
+      });            
+</script>
+
+<style>
+    
+.hidden{
+     opacity:0;
+}
+.visible{
+     opacity:1;
+}    
+</style> 
   
   <input name="animation" type="hidden">
    <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon"></i></a></div>

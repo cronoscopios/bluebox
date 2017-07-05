@@ -369,7 +369,7 @@ h6,
 }
 .mbr-footer p a,
 .mbr-footer ul a {
-  color: #0069b1;
+  color: #77787b;
 }
 .mbr-footer-content li::before,
 .mbr-footer .mbr-contacts li::before {
@@ -421,7 +421,7 @@ h6,
 }
 #menu-8 .close-icon::before,
 #menu-8 .close-icon::after {
-  background-color: #2969b0;
+  background-color: #fff;
 }
 #menu-8 .link,
 #menu-8 .dropdown-item {
@@ -436,20 +436,23 @@ h6,
     display: inline-grid;
     padding: 50px 0;
     min-width: 190px;
-    border: 2px solid #fff;
-    background-color: #345271;
+    border: 3px solid #fff;
+    background-color:#0069b1;
     color: #fff;
     text-transform: uppercase;
     font-weight: 400;
-    font-size: 15px;
-    -webkit-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
+    font-size: 20px;
+        -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+    
+    /*-webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;*/
 }
 #menu-8 .link:hover,
 #menu-8 .dropdown-item:hover,
 #menu-8 .link:focus,
 #menu-8 .dropdown-item:focus {
-  color: #0069b1;
+  color: #83c787;
 }
 #menu-8 .link[aria-expanded="true"],
 #menu-8 .dropdown-menu {
@@ -459,13 +462,14 @@ h6,
 #menu-8 .nav-dropdown-sm .link:hover,
 #menu-8 .nav-dropdown-sm .dropdown-item:focus,
 #menu-8 .nav-dropdown-sm .dropdown-item:hover {
-  background: #f7f7f7!important;
+  /*background: #83c787!important;*/
+    border-color: #83c787;
 }
 #menu-8 .navbar,
 #menu-8 .nav-dropdown-sm,
 #menu-8 .nav-dropdown-sm .link[aria-expanded="true"],
 #menu-8 .nav-dropdown-sm .dropdown-menu {
-  background: #ffffff;
+  background:#2969b0;
 }
 #menu-8 .bg-color.transparent .link {
   color: #2969b0;
@@ -485,6 +489,8 @@ h6,
 #header1-0 .mbr-section-title {
   font-size: 60px;
   color: #ffffff;
+    position: relative;
+    
 }
 #header1-0 .mbr-section-lead {
   font-size: 46px;
@@ -569,12 +575,13 @@ h6,
   color: #83c787;
 }
 #contacts1-11 STRONG {
-  color: #bed689;
+  color: #83c787;
   font-size: 20px;
 }
 #contacts1-11 P {
   color: #83c787;
   font-size: 17px;
+ font-weight: 100;        
 }
 #footer1-k P {
   color: #ffffff;
