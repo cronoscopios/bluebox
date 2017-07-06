@@ -592,7 +592,7 @@ body {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6,
 .display-1, .display-2, .display-3, .display-4 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'bentonsansbold', sans-serif;
   word-break: break-word;
   word-wrap: break-word; }
 
@@ -1640,7 +1640,7 @@ left: 0;
 .mbr-footer-content p strong, .mbr-footer-content strong, .mbr-footer .mbr-contacts h1, .mbr-footer .mbr-contacts h2, .mbr-footer .mbr-contacts h3, .mbr-footer .mbr-contacts h4,
 .mbr-footer .mbr-contacts p strong, .mbr-footer .mbr-contacts strong {
   color: #7c7c7c;
-  font-family: "Montserrat";
+  font-family: 'bentonsansbold', sans-serif;
   font-size: 1rem;
   font-weight: 700;
   etter-spacing: -1px;

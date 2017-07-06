@@ -1,13 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 
 
-
-
 body,
 input,
 textarea,
 .mbr-company .list-group-text {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'bentonsanslight', sans-serif;
 }
 .mbr-footer-content li,
 .mbr-footer .mbr-contacts li {
@@ -35,7 +33,7 @@ h6,
 .mbr-gallery-title,
 .mbr-map [data-state-details],
 .mbr-price {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'bentonsansbold', sans-serif;
 }
 .mbr-footer-content h1,
 .mbr-footer .mbr-contacts h1,
@@ -523,7 +521,7 @@ h6,
 #features4-1 P {
   text-align: center;
   color: #ffffff;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'bentonsanslight', sans-serif;
   font-size: 15px;
 }
 #features4-1 H4 {
