@@ -495,7 +495,7 @@ h6,
   color: #41a85f;
 }
 #header1-0 .mbr-section-title SPAN {
-  font-size: 60px;
+  font-size: 4.5rem;
   color: #ffffff;
 }
 #header1-0 .mbr-section-lead SPAN {
@@ -505,8 +505,9 @@ h6,
   background-color: #ffffff;
 }
 #features1-14 .mbr-cards-col:nth-child(even) .card-title {
-  text-align: right;
+  text-align: left;
   color: #ffffff;
+  margin-left: 0;
 }
 #features1-14 .mbr-cards-col:nth-child(even) .card-title SPAN {
   color: #2969b0;
@@ -527,6 +528,15 @@ h6,
 #features4-1 H4 {
   color: #bed689;
 }
+#features1-14 .mbr-section-title SPAN{
+    color: #2969b0;
+    text-align: left;
+}
+#features1-14 .lead2 p{
+    color: #2969b0;
+    font-size:2rem;
+}
+
 #msg-box3-l .mbr-section-title,
 #msg-box3-l p {
   color: #000;

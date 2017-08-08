@@ -499,7 +499,7 @@ p.lead,
   margin-top: 3.9rem; }
 
 .display-2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 600;
   letter-spacing: -1px;
   margin-bottom: 1.5625rem;
@@ -586,7 +586,7 @@ p.lead,
  * TYPOGRAPHY
  */
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'bentonsansbold', sans-serif;
   color: #232323; }
 
 h1, h2, h3, h4, h5, h6,
@@ -597,7 +597,7 @@ h1, h2, h3, h4, h5, h6,
   word-wrap: break-word; }
 
 input, textarea {
-  font-family: "Raleway"; }
+  font-family: 'bentonsansbold', sans-serif;}
 
 input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
   transition-delay: 9999s;
@@ -680,7 +680,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   font-style: italic;
   font-weight: 400;
   font-size: 17px;
-  font-family: "Lora";
+  font-family: 'bentonsansbold', sans-serif;
   line-height: 26px;
   color: #8c8c8c;
   margin-bottom: 30px; }
@@ -695,7 +695,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   margin-bottom: 1.6875rem; }
 .mbr-section-hero .mbr-section-lead {
   color: #fff;
-  font-family: Lora;
+  font-family: 'bentonsansbold', sans-serif;
   font-size: 1.5rem;
   font-style: italic;
   margin-top: -1em; }
@@ -740,16 +740,28 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
   .mbr-section-hero.mbr-after-navbar .mbr-section {
     padding-top: 120px; }
+    
   .mbr-section-hero.mbr-section-with-arrow .mbr-section {
     padding-bottom: 120px; }
-  .mbr-section-hero .mbr-section-title {
-    font-size: 3.125rem !important; }
+    
+  .mbr-section-hero .mbr-section-title SPAN{
+    font-size: 3rem !important; }
+    
+    .mbr-section-hero .mbr-section-title b{
+    font-size: 3.125rem !important; 
+    letter-spacing: 0 !important;}
+
+    
+    
   .mbr-section-hero .mbr-section-lead {
     font-size: 1.125rem !important; }
+    
   .mbr-section-hero .mbr-section-btn .btn {
     font-size: 0.75rem !important;
     line-height: 1.5;
-    padding: 0.75rem 2.1875rem; } }
+    padding: 0.75rem 2.1875rem; } 
+}
+
 .mbr-section-full .mbr-overlay {
   min-height: 100vh; }
 
@@ -844,7 +856,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     width: 100%; }
   .mbr-map [data-state-details] {
     color: #6b6763;
-    font-family: Montserrat;
+    font-family: 'bentonsansbold', sans-serif;
     height: 1.5em;
     margin-top: -0.75em;
     padding-left: 1.25rem;
@@ -953,7 +965,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   opacity: 0.9; }
 
 .mbr-gallery-title {
-  font-family: Montserrat;
+  font-family: 'bentonsansbold', sans-serif;
   font-size: 0.9em;
   position: absolute;
   display: block;
@@ -1205,10 +1217,14 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   padding-right: 0;
   padding-top: 120px;
   padding-bottom: 120px; }
+
   @media (max-width: 767px) {
     .mbr-cards-col {
       padding-top: 60px;
-      padding-bottom: 60px; } }
+      padding-bottom: 60px; }
+      
+}
+
 .mbr-cards .striped .card {
   padding-left: 0;
   padding-right: 10%; }
@@ -1224,10 +1240,11 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   padding-left: 0;
   padding-right: 0;
   margin-bottom: 0; }
+
   @media (max-width: 991px) {
     .mbr-cards .card {
       padding-left: 0;
-      padding-right: 0; } }
+        padding-right: 0;}}
 @media (min-width: 992px) {
   .mbr-cards-row {
     display: table;
@@ -1824,7 +1841,12 @@ left: 0;
       bottom: 31px; } }
   @media (max-width: 320px) {
     .mbr-arrow {
-      bottom: 21px; } }
+      bottom: 21px;}
+    .mbr-cards .card-title h4{
+        border:1px solid white !important;
+      }
+
+}
   @media all and (device-width: 320px) and (device-height: 568px) and (orientation: portrait) {
     .mbr-arrow {
       bottom: 31px; } }
